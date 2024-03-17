@@ -1,0 +1,57 @@
+[tool.poetry]
+name = "detectron2"
+version = "0.1.0"
+description = ""
+authors = ["daichi1207 <daichiyashima@gmail.com>"]
+
+
+# [[tool.poetry.source]]
+# name = "torch"
+# url = "https://download.pytorch.org/whl/"
+# secondary = true
+# default = false
+
+[tool.poetry.dependencies]
+python = "3.8.10"
+docutils = "0.16"
+sphinx = "3.2.0"
+recommonmark = "0.6.0"
+sphinx-rtd-theme = "*"  
+termcolor = "*"  
+numpy = "^1.22.0"  
+tqdm = "^4.64.1"  
+matplotlib = "^3.6.2"  
+yacs = "*"  
+tabulate = "*"  
+cloudpickle = "*"  
+Pillow = "*"  
+future = "*"  
+torch = { url = "https://download.pytorch.org/whl/cu111/torch-1.10.1%2Bcu111-cp38-cp38-linux_x86_64.whl" }
+torchvision = { url = "https://download.pytorch.org/whl/cu111/torchvision-0.11.2%2Bcu111-cp38-cp38-linux_x86_64.whl" }
+omegaconf = ">=2.1.0.dev24"
+hydra-core = ">=1.1.0.dev5"
+scipy = "*"  
+timm = "*"  
+fvcore = { git = "https://github.com/facebookresearch/fvcore.git" }
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+flake8 = "^4.0.1"
+flake8-docstrings = "^1.6.0"
+isort = "^5.10.1"
+mypy = "^0.950"
+
+[build-system]
+requires = ["setuptools", "wheel", "torch==1.10.2+cu113", "torchvision==0.11.3+cu113", "ninja2"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[tool.black]
+target-version = ['py38']
+line-length = 120
+
+[tool.isort]
+profile = "black"
+
+[tool.mypy]
+python_version = "3.8"
+
