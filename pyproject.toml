@@ -33,7 +33,7 @@ hydra-core = ">=1.1.0.dev5"
 scipy = "*"  
 timm = "*"  
 fvcore = { git = "https://github.com/facebookresearch/fvcore.git" }
-pycocotools = { git = "https://github.com/philferriere/cocoapi.git#egg=pycocotools&subdirectory=PythonAPI"} 
+pycocotools = "*"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"
